@@ -3,17 +3,27 @@
 }
 
 .outer {
-	width: 60%;
+	width: 80%;
 	margin: 0 auto;
 }
 
 .form-group {
 	min-height: 100px;
+	display: inline;
 }
 
-/*.has-success {
-	color: #333 !important;
-	border: 1px solid #ccc !important;
-	box-shadow: none !important;
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback {
+    color: #000;
+    border-color: #000;
+}
 
-}*/
+
+.has-success .form-control {
+	border-color: #ccc !important;
+}
+
+.has-success .form-control:focus {
+	border-color: #ccc !important;
+}

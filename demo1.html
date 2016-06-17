@@ -58,10 +58,6 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="demo1.html">Demo 1<span class="sr-only">(current)</span></a></li>
         <li><a href="demo2.html">Demo 2</a></li>
-        <li><a href="demo3.html">Demo 3</a></li>
-        <li><a href="demo4.html">Demo 4</a></li>
-        <li><a href="demo5.html">Demo 5</a></li>
-        <li><a href="demo6.html">Demo 6</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -80,69 +76,133 @@
 <!-- Text input-->
 
 <div class="outer">
+  <div class="row">
 
-<div class="form-group col-md-6">
-  <label class="control-label">First Name</label>  
-  <div class="inputGroupContainer">
-  <div class="input-group">
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label">Fiscal Year*</label>  
+        <div class="inputGroupContainer">
+          <div class="input-group">
+          <input  name="fiscal_year" placeholder="2016" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
+  <!-- Text input-->
+
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label">Requisition Number*</label>  
+        <div class="inputGroupContainer">
+          <div class="input-group">
+          <input  name="req_number" placeholder="" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+    </div>
 
 <!-- Text input-->
 
-<div class="form-group col-md-6">
-  <label class="control-label" >Last Name</label> 
-    <div class="inputGroupContainer">
-    <div class="input-group">
-  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+<div class="col-md-4">
+    <div class="form-group">
+      <label class="control-label">Created Date*</label> 
+      <div class="inputGroupContainer">
+        <div class="input-group">
+          <input name="created_date" placeholder="" class="form-control"  type="text">
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</div><!-- End Row--> 
+
+<div class="row">
 
 <!-- Text input-->
-       <div class="form-group col-md-6">
-  <label class="control-label">E-Mail</label>  
-    <div class="inputGroupContainer">
-    <div class="input-group">
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+  <div class="col-md-4">
+    <div class="form-group">
+    <label class="control-label">Department*</label>  
+      <div class="inputGroupContainer">
+        <div class="input-group">
+          <input name="department" placeholder="(120) Diane's Department" class="form-control"  type="text">
+        </div>
+      </div>
     </div>
   </div>
-</div>
+
 
 
 <!-- Text input-->
-       
-<div class="form-group col-md-6">
-  <label class="control-label">Phone #</label>  
-    <div class="inputGroupContainer">
-    <div class="input-group">
-  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label class="control-label">Commodity</label>  
+      <div class="inputGroupContainer">
+        <div class="input-group">
+          <input name="commodity" placeholder="" class="form-control" type="text">
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
 <!-- Text input-->
-      
-<div class="form-group col-md-6">
-  <label class="control-label">Address</label>  
-    <div class="inputGroupContainer">
-    <div class="input-group">
-  <input name="address" placeholder="Address" class="form-control" type="text">
+
+  <div class="col-md-4">      
+    <div class="form-group">
+      <label class="control-label">Description</label>  
+      <div class="inputGroupContainer">
+        <div class="input-group">
+            <input name="description" placeholder="" class="form-control" type="text">
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</div><!--end row-->
 
+<div class="row">
 
-<div class="form-group col-md-6">
-  <label class="control-label">Description</label>
-    <div class="inputGroupContainer">
-    <div class="input-group">
-        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+<!-- Text input-->
+
+  <div class="col-md-4">  
+    <div class="form-group">
+      <label class="control-label">Buyer</label>
+      <div class="inputGroupContainer">
+        <div class="input-group">
+            <input name="buyer" placeholder="" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
   </div>
+
+<!-- Text input-->
+
+  <div class="col-md-4">  
+    <div class="form-group">
+      <label class="control-label">Type</label>
+      <div class="inputGroupContainer">
+        <div class="input-group">
+            <input name="type" placeholder="(N) Normal" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
+<!-- Text input-->
+
+  <div class="col-md-4">  
+    <div class="form-group">
+      <label class="control-label">Needed By</label>
+      <div class="inputGroupContainer">
+        <div class="input-group">
+            <input name="needed_by" placeholder="mm/dd/yyyy" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+
+</div><!--end row-->
 
 </fieldset>
 </form>

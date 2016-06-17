@@ -1,110 +1,122 @@
   $(document).ready(function() {
+
     $('#contact_form').bootstrapValidator({
        
         feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
+            valid: null,
+            invalid: null,
+            validating: null
         },
         fields: {
-            first_name: {
+            fiscal_year: {
+                trigger: 'blur',
                 validators: {
-                        stringLength: {
-                        min: 2,
-                        message: 'Please enter your first name'
-                    },
-                        notEmpty: {
-                        message: 'Please enter your first name'
-                    }
-                }
-            },
-             last_name: {
-                validators: {
-                     stringLength: {
-                        min: 2,
-                        message: 'Please enter your last name'
+                     between: {
+                        min: 2014,
+                        max: 2016,
+                        message: 'Please enter a valid fiscal year, YYYY'
                     },
                     notEmpty: {
-                        message: 'Please enter your last name'
+                        message: 'Required'
                     }
                 }
             },
-            email: {
+             req_number: {
+                trigger: 'blur',
+                validators: {
+                     stringLength: {
+                        min: 8,
+                        max: 8,
+                        message: 'Please enter a valid 8 digit requisition number'
+                    },
+                    notEmpty: {
+                        message: 'Required'
+                    }
+                }
+            },
+            created_date: {
+                trigger: 'blur',
+                Validators: {
+                    date: {
+                        min: 2015,
+                        message: 'Please enter a valid date, mm/dd/yyyy'
+                    },
+                    notEmpty: {
+                        message: 'Required'
+                    }
+                }
+            },
+            department: {
+                trigger: 'blur',
                 validators: {
                     stringLength: {
-                        min: 35,
-                        message: 'Please enter a valid email address'
+                        min: 15,
+                        message: 'Please enter this department instead: &#40;120&#41; Dianne&#39;s Department'
                     },
                     notEmpty: {
-                        message: 'Please supply your email address'
+                        message: 'Required'
                     }
                 }
             },
-            phone: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please supply your phone number'
-                    },
-                    phone: {
-                        country: 'US',
-                        message: 'Please supply a vaild phone number with area code'
-                    }
-                }
-            },
-            address: {
+            commodity: {
+                trigger: 'blur',
                 validators: {
                      stringLength: {
-                        min: 35,
+                        min: 3,
+                        message: 'Please enter a valid commodity value'
                     },
                     notEmpty: {
-                        message: 'Please supply your street address'
+                        message: 'Required'
                     }
                 }
             },
-            city: {
+            description: {
+                trigger: 'blur',
                 validators: {
-                     stringLength: {
-                        min: 4,
-                    },
                     notEmpty: {
-                        message: 'Please supply your city'
+                        message: 'Please enter a description'
                     }
                 }
             },
-            state: {
+            buyer: {
+                trigger: 'blur',
                 validators: {
                     notEmpty: {
-                        message: 'Please select your state'
+                        message: 'Please enter a buyer'
                     }
                 }
             },
-            zip: {
+            type: {
+                trigger: 'blur',
                 validators: {
-                    notEmpty: {
-                        message: 'Please supply your zip code'
+                    stringLength: {
+                        min: 11,
+                        max: 11,
+                        message: 'Please enter &#40;E&#41 EXPORTED instead'
                     },
-                    zipCode: {
-                        country: 'US',
-                        message: 'Please supply a vaild zip code'
+                    notEmpty: {
+                        message: 'Required'
                     }
                 }
             },
-            comment: {
-                validators: {
-                      stringLength: {
-                        min: 10,
-                        max: 200,
-                        message:'Please enter at least 10 characters and no more than 200'
+            needed_by: {
+                trigger: 'blur',
+                Validators: {
+                    date: {
+                        min: 06/17/2016,
+                        message: 'Please enter a valid date, mm/dd/yyyy'
                     },
                     notEmpty: {
-                        message: 'Please supply a description of your project'
-                    }
+                        message: 'Required'
                     }
                 }
             }
-        })
-        
-                $('#contact_form').data('bootstrapValidator').resetForm();
+
+        }
+    });
+
+
+            $('#contact_form').data('bootstrapValidator').resetForm();
 
             // Prevent form submission
             e.preventDefault();
@@ -119,6 +131,11 @@
             $.post($form.attr('action'), $form.serialize(), function(result) {
                 console.log(result);
             }, 'json');
+
+            
+
         });
+
+
 
 
