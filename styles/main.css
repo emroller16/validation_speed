@@ -1,0 +1,19 @@
+.input-group {
+	max-width: 400px;
+}
+
+.outer {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.form-group {
+	min-height: 100px;
+}
+
+/*.has-success {
+	color: #333 !important;
+	border: 1px solid #ccc !important;
+	box-shadow: none !important;
+
+}*/
